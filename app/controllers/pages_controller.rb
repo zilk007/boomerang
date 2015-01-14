@@ -7,4 +7,7 @@ class PagesController < ApplicationController
 
   def campaign
   end
+
+  def test
+  end
 end

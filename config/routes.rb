@@ -15,6 +15,7 @@ Stukdo::Application.routes.draw do
  get 'about' => "pages#about"
 
  get 'campaign' => "pages#campaign"
+ get 'test'=> "pages#test"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
