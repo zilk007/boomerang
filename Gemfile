@@ -66,4 +66,6 @@ gem 'simple_form'
 
 gem 'devise'
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :mingw]
+
 gem "auto_html"
