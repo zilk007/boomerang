@@ -55,3 +55,9 @@ gem 'simple_form'
 gem 'devise'
 
 gem "auto_html"
+
+gem 'rename'
+
+gem 'activeadmin', github: 'activeadmin'
+
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'

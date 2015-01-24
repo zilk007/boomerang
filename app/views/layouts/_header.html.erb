@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "<i class='fa fa-circle-o-notch'></i> Stukdo".html_safe, root_path, class: "navbar-brand" %>
+      <%= link_to "<i class='fa fa-circle-o-notch'></i> Boomerang".html_safe, root_path, class: "navbar-brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,10 +19,14 @@
         <% if current_user %>
         <li><%= link_to "Setting", edit_user_registration_path %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Create", new_visitor_registration_path %></li>
+        
 
         <% else %>
+
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Admin", new_admin_user_session_path %><li>
         <% end %>
 
       </ul>

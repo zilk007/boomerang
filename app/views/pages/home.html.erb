@@ -1,5 +1,30 @@
 <div class="jumbotron">
-	<h1><i class="fa fa-circle-o-notch"></i> Stukdo</h1>
+	<h1><i class="fa fa-circle-o-notch"></i> Boomerang</h1>
 	<p>This is my smart to do list Ruby on Rails Application</p>
 	<%= link_to "Sign Up",new_user_registration_path, class: "btn btn-primary btn-lg" %>
+
+
+
+
+
+
+<% if user_signed_in? %>
+ <%= current_user.name %>
+<% end %>
+
+
+<!--
+
+<% if user_signed_in? %>
+
+<% User.find do |u| %>
+  <div>
+    <div><%= u.name %></div>
+  </div>
+<% end %>
+<%end%>
+-->
+
+
 </div>
+

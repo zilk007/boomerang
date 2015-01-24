@@ -1,15 +1,57 @@
 <div class="panel panel-info">
 	<div class="panel-heading">
-		<%= link_to edit_task_path(task) do %>
-		created <%= time_ago_in_words(task.created_at) %> ago
-		<% end %>
+		<!--<%= link_to edit_task_path(task) do %> -->
+		Current user logged in:<h2><%= current_user.email %></h2>
+		<!--<%= current_user.current_sign_in_at %> -->
+		<!--<%= current_user.restaurant_name %> -->
+		<!--created <%= time_ago_in_words(task.created_at) %> ago -->
+		<!--<% end %> -->
 
 
-<%= link_to "x", task_path(task), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right" %>
+<!--
+		User.find_each do |user|
+  NewsMailer.weekly(user).deliver_now
+end
+-->
+
+		<%= link_to "x", task_path(task), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right" %>
 	</div>
-	<div class="panel-body"><%= raw(task.content_html) %></div>
+	
 
-	<div class="panel-footer text-center">
+    
+
+
+
+	<div class="jumbotron other-color">
+		<!-- <div class="panel-body"><%= raw(task.content_html) %></div> -->
+				<!-- <div class="panel-body"><%= raw(task.content_html) %></div> -->
+
+				<% if user_signed_in? %>
+				 <div class="panel-body"><%=render current_user.name %></div>
+<% end %>
+
+
+		 <table class="table">
+    ...
+  </table>
+
+	</div>
+
+  <div class="panel-heading"></div>
+
+</div>
+
+
+</div>
+
+	
+	
+
+	
+<!--
+
+<div class="panel-footer">
+
 		<% if task.state == "doing" %>
 		<div class="btn-groun btn-group-justified">
 			<%= link_to "<i class='fa fa-arrow-left'></i>".html_safe, change_task_path(task, state: "to_do"), method: :put, class: "btn btn-info btn-md btn-block" %>
@@ -21,4 +63,8 @@
 		<%= link_to "<i class='fa fa-arrow-right'></i>".html_safe, change_task_path(task, state: "doing"), method: :put, class: "btn btn-info btn-md btn-block"  %>
 		<% end %>
 	</div>
+
+
 </div>
+
+-->

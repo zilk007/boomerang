@@ -1,4 +1,7 @@
-Stukdo::Application.routes.draw do
+Boomerang::Application.routes.draw do
+  devise_for :visitors
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :tasks do
     member do
       put :change
@@ -16,7 +19,11 @@ Stukdo::Application.routes.draw do
 
  get 'campaign' => "pages#campaign"
  get 'test'=> "pages#test"
-
+ get 'bar' => "pages#bar"
+ get 'template' => "pages#template"
+ get 'templateSecond' => "pages#templateSecond"
+ get 'templateThird' => "pages#templateThird"
+ get 'templateFourth' => "pages#templateFourth"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

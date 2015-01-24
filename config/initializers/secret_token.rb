@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Stukdo::Application.config.secret_key_base = 'f63df673cc9555ac3498fef8efbfc12fde4dc5f56fb558bbdc760cc0e937191f93dfb94a78f67c145da617f5a95877932f9de86c070f75a7884c21da29368428'
+Boomerang::Application.config.secret_key_base = 'f63df673cc9555ac3498fef8efbfc12fde4dc5f56fb558bbdc760cc0e937191f93dfb94a78f67c145da617f5a95877932f9de86c070f75a7884c21da29368428'

@@ -1,0 +1,111 @@
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+<!-- <% if @user.blank? %>
+<p>No user to display</p>
+
+<% else %>-->
+   
+   <!-- <% User.all.each do |f| %>
+    <li>
+      
+    </li>
+    <% end %>
+</ul>
+  <% end %><%= User.column_names%> -->
+
+
+
+
+ 
+<BR>
+  
+
+  	<table class="table">
+   
+      <TH colspan ="3"><H3><b>Table for Brunch</b></H3>
+      </TH>
+   </TR>
+   <TR>
+       <TH>Recipients</TH>
+      <TH>Email Title</TH>
+      <TH>Send Days</TH>
+
+   </TR>
+   <TR>
+
+
+    <TD width="10%"><%= link_to type: 'Tynewydd', id: "logo" do %><i class="fa fa-plus-square"></i> <% end %></TD>
+      <TD width="20%"><li><%= link_to "Free Starter", template_path, :target => "_blank" %></li></TD>
+       
+      <TD>0 Days</TD>
+   </TR>
+    <TR>
+       <TD width="10%"><%= link_to template_path, id: "logo" do %> <i class="fa fa-plus-square"></i> <% end %></TD>
+      <TD width="20%"><li><%= link_to "Reminder", templateSecond_path, :target => "_blank" %></li></TD>
+      <TD>3 Days</TD>
+   </TR>
+     <TR>
+      <TD width="10%"><%= link_to template_path, id: "logo" do %> <i class="fa fa-plus-square"></i> <% end %></TD>
+      <TD width="20%"><li><%= link_to "Free Bottle of Wine", templateThird_path, :target => "_blank" %></li></TD>
+      <TD>10 Days</TD>
+   </TR>
+    <TR>
+      <TD width="10%"><%= link_to template_path, id: "logo" do %> <i class="fa fa-plus-square"></i> <% end %></i></TD>
+      <TD width="20%"><li><%= link_to "50% Discound", templateFourth_path, :target => "_blank" %></li></TD>
+      <TD>30 Days</TD>
+   </TR>
+</TABLE>
+
+
+<% if params[:type] == 'Tynewydd' %>
+  <%= render 'dblist' %>
+<% end %>
+
+
+
+
+<%#
+Local variables:
+* grid - instance of Datagrid
+* assets - Array of database Entities
+* options - passed options Hash
+%>
+
+<!--
+<%=User.pluck(:email)%> 
+<br>
+
+
+
+<%=arr = Array.new 
+ arr = User.all
+
+
+arr.map(&:email)%>
+
+
+
+<% User.find_each do |u| %>
+  <div>
+    <div><%= u.email %></div>
+  </div>
+<% end %>
+
+-->
+<!--
+<div class="span6">
+      <h2>Document</h2>
+        </p>
+        <textarea class="field span12" id="textarea" rows="6" placeholder="Create message"></textarea>
+        <button class="btn">Upload</button>
+    </div>
+-->
+
+  </div>
+  <div class="panel-footer"></div>
+</div>
